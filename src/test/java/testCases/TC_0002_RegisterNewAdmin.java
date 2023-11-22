@@ -2,6 +2,7 @@ package testCases;
 
 import org.testng.annotations.Test;
 
+import pageObjects.AdministrationListPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.ManagerPage;
@@ -9,8 +10,7 @@ import testBase.BaseClass;
 import utilities.DataProviders;
 
 public class TC_0002_RegisterNewAdmin extends BaseClass {
-	@Test(groups = { "sanity",
-			"master" }, dataProvider = "NewAdminAccountData", dataProviderClass = DataProviders.class)
+	@Test(groups = { "sanity" }, dataProvider = "NewAdminAccountData", dataProviderClass = DataProviders.class)
 	public void testNewAdminCreation(String username, String email, String fname, String lname, String password,
 			String confirmpassword) {
 		logger.info("*** Starting TC_0002_RegisterNewAdmin ***");
@@ -41,6 +41,13 @@ public class TC_0002_RegisterNewAdmin extends BaseClass {
 		logger.info("Authorization groups are selected");
 		managerPage.saveNewlyCreatedManager();
 		logger.info("Admin Accont is created successfully");
+		managerPage.goToAdministrationList();
+		logger.info("Admin is on administartion List page");
+		AdministrationListPage administrationListPage= new AdministrationListPage(driver);
+		administrationListPage.searchNewlyCreatedAdminByName(username);
+		logger.info("Admin is searched using username on the administration list page");
+		administrationListPage.deleteAdmin();
+		logger.info("Newly created admin is deleted successfully");
 		homePage.clickLogout();
 		logger.info("Clicked on My Account Icon and subsequently Logout Link");
 		logger.info("*** Finished TC_0002_RegisterNewAdmin ***");

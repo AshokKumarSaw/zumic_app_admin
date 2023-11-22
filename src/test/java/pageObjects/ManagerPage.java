@@ -41,6 +41,9 @@ public class ManagerPage extends BasePage {
 	@FindBy(xpath="//button[normalize-space()='Save']")
 	WebElement btnSave;
 	
+	@FindBy(xpath="//a[normalize-space()='Managers']")
+	WebElement lnkManagers;
+	
 	
 	//Method
 	
@@ -85,5 +88,10 @@ public class ManagerPage extends BasePage {
 	public void saveNewlyCreatedManager()
 	{
 		btnSave.click();
+	}
+	public void goToAdministrationList()
+	{
+		js.executeScript("window.scrollBy(0,-1000)");
+		lnkManagers.click();
 	}
 }

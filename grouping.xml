@@ -5,22 +5,26 @@
 		<listener class-name="utilities.ExtentReportManager"></listener>
 	</listeners>
 	<test thread-count="5" name="zumicTest">
-		<parameter name="browser" value="chrome"></parameter>
+
+		<!-- <parameter name="browser" value="chrome"></parameter>-->
+		<!--<parameter name="browser" value="firefox"></parameter>-->
+		<parameter name="browser" value="edge"></parameter>
 
 		<groups>
 			<run>
 
-				<include name="master"></include>
-				 <!--	<include name="sanity"></include> -->
-	           <!--   <include name="regression"></include> -->
-	
-<!-- 	<exclude name="master"></exclude> -->
-<!--	<exclude name="sanity"></exclude> -->
-<!--	<exclude name="regression"></exclude> -->
+				<!-- 	<include name="master"></include> -->
+				<include name="sanity"></include>
+				<!--   <include name="regression"></include> -->
+
+				<!-- 	<exclude name="master"></exclude> -->
+				<!--	<exclude name="sanity"></exclude> -->
+				<!--	<exclude name="regression"></exclude> -->
 			</run>
 		</groups>
 		<classes>
-			<class name="testCases.TC_0001_EventCreateDelete" />		
+			<class name="testCases.TC_0001_EventCreateDelete" />
+			<class name="testCases.TC_0002_RegisterNewAdmin" />
 		</classes>
 	</test>
 </suite> 

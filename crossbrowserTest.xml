@@ -8,6 +8,7 @@
 	 <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="testCases.TC_0001_EventCreateDelete"/>
+  <!--    <class name="testCases.TC_0002_RegisterNewAdmin"/> --> 
     </classes>
   </test> 
   
@@ -15,16 +16,18 @@
   <test thread-count="5" name="FirefoxTest">
 	 <parameter name="browser" value="firefox"></parameter>
     <classes>
-      <class name="testCases.TC_0001_EventCreateDelete"/>
+    <!--   <class name="testCases.TC_0001_EventCreateDelete"/> --> 
+      <class name="testCases.TC_0002_RegisterNewAdmin"/> 
     </classes>
   </test> 
   
-  <test thread-count="5" name="EdgeTest">
+ <!--  <test thread-count="5" name="EdgeTest">
 	 <parameter name="browser" value="edge"></parameter>
     <classes>
       <class name="testCases.TC_0001_EventCreateDelete"/>
+      <class name="testCases.TC_0002_RegisterNewAdmin"/> 
     </classes>
-  </test> 
+  </test> -->
   
   
   

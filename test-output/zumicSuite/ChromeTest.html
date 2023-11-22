@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Nov 16 19:10:41 IST 2023</td>
+<td>Started on:</td><td>Sat Nov 18 13:13:18 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>69 seconds (69004 ms)</td>
+<tr><td>Total time:</td><td>83 seconds (83344 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testCases.TC_0001_Login.testLogin()'><b>testLogin</b><br>Test class: testCases.TC_0001_Login</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Create&apos;]&quot;}
-  (Session info: MicrosoftEdge=119.0.2151.58)
+<td title='testCases.TC_0001_EventCreateDelete.tesEeventCreationDeletion()'><b>tesEeventCreationDeletion</b><br>Test class: testCases.TC_0001_EventCreateDelete</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[normalize-space()=&apos;Create&apos;]
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [98dde9002a4a3b47c5e9e01e44455902, findElement {using=xpath, value=//a[normalize-space()=&apos;Create&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 119.0.2151.58, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63996}, msedge: {msedgedriverVersion: 119.0.2151.58 (33e26e7eb4fb..., userDataDir: C:\Users\User\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63996/devtoo..., se:cdpVersion: 119.0.2151.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 98dde9002a4a3b47c5e9e01e44455902
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [b7b03ac1-ed54-4abb-bad5-42258e20ad3c, findElement {using=xpath, value=//a[normalize-space()=&apos;Create&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:28452, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17516, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:28452/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b7b03ac1-ed54-4abb-bad5-42258e20ad3c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -101,22 +100,21 @@ Session ID: 98dde9002a4a3b47c5e9e01e44455902
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
 	at pageObjects.EventListPage.clickCreate(EventListPage.java:66)
-	at testCases.TC_0001_Login.testLogin(TC_0001_Login.java:30)
+	at testCases.TC_0001_EventCreateDelete.tesEeventCreationDeletion(TC_0001_EventCreateDelete.java:30)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1967317980", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1967317980'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Create&apos;]&quot;}
-  (Session info: MicrosoftEdge=119.0.2151.58)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace484757038", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace484757038'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //a[normalize-space()=&apos;Create&apos;]
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [98dde9002a4a3b47c5e9e01e44455902, findElement {using=xpath, value=//a[normalize-space()=&apos;Create&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 119.0.2151.58, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63996}, msedge: {msedgedriverVersion: 119.0.2151.58 (33e26e7eb4fb..., userDataDir: C:\Users\User\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63996/devtoo..., se:cdpVersion: 119.0.2151.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 98dde9002a4a3b47c5e9e01e44455902
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [b7b03ac1-ed54-4abb-bad5-42258e20ad3c, findElement {using=xpath, value=//a[normalize-space()=&apos;Create&apos;]}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:28452, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 17516, moz:profile: C:\Users\User\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:28452/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b7b03ac1-ed54-4abb-bad5-42258e20ad3c
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -137,7 +135,7 @@ Session ID: 98dde9002a4a3b47c5e9e01e44455902
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy32.click(Unknown Source)
 	at pageObjects.EventListPage.clickCreate(EventListPage.java:66)
-	at testCases.TC_0001_Login.testLogin(TC_0001_Login.java:30)
+	at testCases.TC_0001_EventCreateDelete.tesEeventCreationDeletion(TC_0001_EventCreateDelete.java:30)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -161,8 +159,8 @@ Session ID: 98dde9002a4a3b47c5e9e01e44455902
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>28</td>
-<td>testCases.TC_0001_Login@7c7a06ec</td></tr>
+<td>51</td>
+<td>testCases.TC_0001_EventCreateDelete@7c7a06ec</td></tr>
 </table><p>
 </body>
 </html>
