@@ -29,9 +29,7 @@ public class BaseClass {
 	public Logger logger;
 	public ResourceBundle rb;
 //	public Properties properties;
-	
-	
-	
+
 	@BeforeClass(groups = { "sanity", "master", "regression" })
 	@Parameters("browser")
 	public void setup(String br) throws IOException {
@@ -43,21 +41,17 @@ public class BaseClass {
 		 * FileInputStream fileInputStream = new FileInputStream(file); Properties
 		 * properties = new Properties(); properties.load(fileInputStream);
 		 */
-		
+
 		/*
 		 * ChromeOptions options = new ChromeOptions();
 		 * options.setExperimentalOption("excludeSwitches", new String[] {
 		 * "enable-automation" }); driver = new ChromeDriver(options);
 		 */
 
-		
 		/*
 		 * ChromeOptions options = new ChromeOptions();
 		 * options.setAcceptInsecureCerts(true); driver = new ChromeDriver(options);
 		 */
-		 
-		
-	
 
 		if (br.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -69,7 +63,7 @@ public class BaseClass {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get(rb.getString("applicationUrl"));
-		//driver.get(properties.getProperty("applicationUrl"));
+		// driver.get(properties.getProperty("applicationUrl"));
 		driver.manage().window().maximize();
 
 	}
@@ -79,11 +73,6 @@ public class BaseClass {
 		driver.quit();
 
 	}
-
-
-	
-	
-	
 
 	public String captureScreen(String tname) throws IOException {
 

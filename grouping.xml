@@ -6,9 +6,9 @@
 	</listeners>
 	<test thread-count="5" name="zumicTest">
 
-		<!-- <parameter name="browser" value="chrome"></parameter>-->
-		<!--<parameter name="browser" value="firefox"></parameter>-->
-		<parameter name="browser" value="edge"></parameter>
+		 <parameter name="browser" value="chrome"></parameter>
+	<!-- 	<parameter name="browser" value="firefox"></parameter> -->
+		<!--<parameter name="browser" value="edge"></parameter> -->
 
 		<groups>
 			<run>
