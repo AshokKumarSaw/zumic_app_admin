@@ -1,11 +1,16 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage {
+	public WebDriverWait explicitWait;
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	public HomePage(WebDriver driver) {
 		super(driver);
@@ -49,9 +54,13 @@ public class HomePage extends BasePage {
 	
 	public void goToAdminPage()
 	{
-		js.executeScript("window.scrollBy(0,800)");
-		drpdwnNew.click();
-		drpdwnOptionManager.click();
+	//	js.executeScript("window.scrollBy(0,800)");
+		explicitWait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		explicitWait.until(ExpectedConditions.elementToBeClickable(drpdwnNew)).click();
+		explicitWait.until(ExpectedConditions.elementToBeClickable(drpdwnOptionManager)).click();
+		
+		//drpdwnNew.click();
+	//	drpdwnOptionManager.click();
 	}
 	
 	

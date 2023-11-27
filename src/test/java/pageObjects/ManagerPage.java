@@ -1,11 +1,16 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ManagerPage extends BasePage {
+	public WebDriverWait explicitWait;
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	public ManagerPage(WebDriver driver) {
 		super(driver);
@@ -49,8 +54,8 @@ public class ManagerPage extends BasePage {
 	
 	public void setUsername(String username)
 	{
-		
-		inputUsername.sendKeys(username);
+		explicitWait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		explicitWait.until(ExpectedConditions.elementToBeClickable(inputUsername)).sendKeys(username);
 	}
 	
 	public void setEmail(String email)

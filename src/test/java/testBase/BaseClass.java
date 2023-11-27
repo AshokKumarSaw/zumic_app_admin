@@ -17,18 +17,24 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+
+import pageObjects.HomePage;
+import pageObjects.LoginPage;
 
 public class BaseClass {
 	public static WebDriver driver;
 	public Logger logger;
 	public ResourceBundle rb;
 //	public Properties properties;
+	HomePage homePage;
 
 	@BeforeClass(groups = { "sanity", "master", "regression" })
 	@Parameters("browser")
@@ -53,6 +59,11 @@ public class BaseClass {
 		 * options.setAcceptInsecureCerts(true); driver = new ChromeDriver(options);
 		 */
 
+		/*
+		 * ChromeOptions options = new ChromeOptions();
+		 * options.addArguments("--headless"); driver = new ChromeDriver(options);
+		 */
+
 		if (br.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (br.equals("edge")) {
@@ -61,15 +72,28 @@ public class BaseClass {
 			driver = new FirefoxDriver();
 		}
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(rb.getString("applicationUrl"));
 		// driver.get(properties.getProperty("applicationUrl"));
 		driver.manage().window().maximize();
+		
+		//Login to the application
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.setLoginUsername(rb.getString("username"));
+	//	Assert.assertEquals(br, br, br)
+		logger.info("Username Entered");
+		loginPage.setLoginPassword(rb.getString("password"));
+		logger.info("Password Entered");
+		loginPage.clickBtnLogin();
+		logger.info("Clicked on Login Button");
 
 	}
 
 	@AfterClass(groups = { "sanity", "master", "regression" })
 	public void tearDown() {
+		homePage=new HomePage(driver);
+		homePage.clickLogout();
+		logger.info("Clicked on My Account Icon and subsequently Logout Link");
 		driver.quit();
 
 	}
