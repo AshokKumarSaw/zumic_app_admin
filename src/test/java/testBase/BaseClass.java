@@ -28,6 +28,7 @@ import org.testng.annotations.Parameters;
 
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
+import utilities.Constant;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -35,6 +36,7 @@ public class BaseClass {
 	public ResourceBundle rb;
 //	public Properties properties;
 	HomePage homePage;
+	LoginPage loginPage;
 
 	@BeforeClass(groups = { "sanity", "master", "regression" })
 	@Parameters("browser")
@@ -80,11 +82,14 @@ public class BaseClass {
 		//Login to the application
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.setLoginUsername(rb.getString("username"));
-	//	Assert.assertEquals(br, br, br)
+	Assert.assertEquals(Constant.ACTUAL_USERNAME, rb.getString("username"), "The actual username used for logging into the application does not match the expected username");
 		logger.info("Username Entered");
 		loginPage.setLoginPassword(rb.getString("password"));
+		Assert.assertEquals(Constant.ACTUAL_PASSWORD, rb.getString("password"), "The actual password used for logging into the application does not match the expected password");
 		logger.info("Password Entered");
 		loginPage.clickBtnLogin();
+		homePage=new HomePage(driver);
+		Assert.assertTrue(homePage.validateLoggedIn(), "Logout button is not visible. User may not be logged in.");
 		logger.info("Clicked on Login Button");
 
 	}
@@ -93,6 +98,8 @@ public class BaseClass {
 	public void tearDown() {
 		homePage=new HomePage(driver);
 		homePage.clickLogout();
+		loginPage=new LoginPage(driver);
+		Assert.assertTrue(loginPage.validateLoggedOut(), "Login button is not visible. User may not be logged out.");
 		logger.info("Clicked on My Account Icon and subsequently Logout Link");
 		driver.quit();
 

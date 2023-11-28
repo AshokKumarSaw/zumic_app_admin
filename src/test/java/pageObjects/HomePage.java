@@ -37,11 +37,21 @@ public class HomePage extends BasePage {
 	public void clickMyAccountDrpdwn() {
 		drpdwnMyAccount.click();
 	}
+	
 
 	public void clickLogout() {
 		drpdwnMyAccount.click();
 		lnkLogout.click();
 	}
+	
+	public boolean validateLoggedIn()
+	{
+		drpdwnMyAccount.click();
+	    boolean result=lnkLogout.isDisplayed();
+	    return 	result;
+	}
+	
+
 
 	public void clickEvent() {
 		menuEvent.click();

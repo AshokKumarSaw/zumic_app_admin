@@ -33,5 +33,11 @@ public class LoginPage extends BasePage {
 	public void clickBtnLogin() {
 		btnLogin.click();
 	}
+	
+	public boolean validateLoggedOut()
+	{
+	    boolean result=btnLogin.isDisplayed();
+	    return 	result;
+	}
 
 }

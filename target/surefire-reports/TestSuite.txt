@@ -1,11 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 52.87 s <<< FAILURE! -- in TestSuite
-testCases.TC_0001_EventCreateDelete.tesEeventCreationDeletion -- Time elapsed: 13.95 s <<< FAILURE!
-java.lang.AssertionError: Test Method tesEeventCreationDeletion in Test Script TC_0001_EventCreateDelete is Failed
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 80.45 s <<< FAILURE! -- in TestSuite
+testCases.TC_0002_RegisterNewAdmin.testNewAdminCreation[Advika, teknotrait.ashok+01@gmail.com, Advika, Sahu, !@#123Advika, !@#123Advika](1) -- Time elapsed: 19.46 s <<< FAILURE!
+java.lang.AssertionError: Test Method testNewAdminCreation in Test Script TC_0002_RegisterNewAdmin is Failed
 	at org.testng.Assert.fail(Assert.java:111)
-	at testCases.TC_0001_EventCreateDelete.tesEeventCreationDeletion(TC_0001_EventCreateDelete.java:42)
+	at testCases.TC_0002_RegisterNewAdmin.testNewAdminCreation(TC_0002_RegisterNewAdmin.java:57)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

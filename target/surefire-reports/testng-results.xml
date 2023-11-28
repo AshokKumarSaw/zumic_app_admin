@@ -2,7 +2,7 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-27T15:54:19 IST" name="zumicSuite" finished-at="2023-11-27T15:55:11 IST" duration-ms="51258">
+  <suite started-at="2023-11-28T17:22:48 IST" name="zumicSuite" finished-at="2023-11-28T17:24:07 IST" duration-ms="78819">
     <groups>
       <group name="sanity">
         <method signature="TC_0001_EventCreateDelete.tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" name="tesEeventCreationDeletion" class="testCases.TC_0001_EventCreateDelete"/>
@@ -12,9 +12,9 @@
         <method signature="TC_0001_EventCreateDelete.tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" name="tesEeventCreationDeletion" class="testCases.TC_0001_EventCreateDelete"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2023-11-27T15:54:19 IST" name="zumicTest" finished-at="2023-11-27T15:55:11 IST" duration-ms="51258">
+    <test started-at="2023-11-28T17:22:48 IST" name="zumicTest" finished-at="2023-11-28T17:24:07 IST" duration-ms="78819">
       <class name="testCases.TC_0002_RegisterNewAdmin">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@359f7cdf]" started-at="2023-11-27T15:54:50 IST" name="setup" finished-at="2023-11-27T15:55:01 IST" duration-ms="10574" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@359f7cdf]" started-at="2023-11-28T17:23:31 IST" name="setup" finished-at="2023-11-28T17:23:44 IST" duration-ms="13243" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,7 +25,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testNewAdminCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@359f7cdf]" started-at="2023-11-27T15:55:03 IST" name="testNewAdminCreation" data-provider="NewAdminAccountData" finished-at="2023-11-27T15:55:09 IST" duration-ms="6064" status="PASS">
+        <test-method signature="testNewAdminCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@359f7cdf]" started-at="2023-11-28T17:23:45 IST" name="testNewAdminCreation" data-provider="NewAdminAccountData" finished-at="2023-11-28T17:24:05 IST" duration-ms="19251" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -58,35 +58,14 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNewAdminCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@359f7cdf]" started-at="2023-11-27T15:55:09 IST" name="tearDown" finished-at="2023-11-27T15:55:11 IST" duration-ms="1870" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_0002_RegisterNewAdmin -->
-      <class name="testCases.TC_0001_EventCreateDelete">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" started-at="2023-11-27T15:54:20 IST" name="setup" finished-at="2023-11-27T15:54:34 IST" duration-ms="14552" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" started-at="2023-11-27T15:54:34 IST" name="tesEeventCreationDeletion" finished-at="2023-11-27T15:54:48 IST" duration-ms="13375" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Test Method tesEeventCreationDeletion in Test Script TC_0001_EventCreateDelete is Failed]]>
+              <![CDATA[Test Method testNewAdminCreation in Test Script TC_0002_RegisterNewAdmin is Failed]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Test Method tesEeventCreationDeletion in Test Script TC_0001_EventCreateDelete is Failed
+              <![CDATA[java.lang.AssertionError: Test Method testNewAdminCreation in Test Script TC_0002_RegisterNewAdmin is Failed
 at org.testng.Assert.fail(Assert.java:111)
-at testCases.TC_0001_EventCreateDelete.tesEeventCreationDeletion(TC_0001_EventCreateDelete.java:42)
+at testCases.TC_0002_RegisterNewAdmin.testNewAdminCreation(TC_0002_RegisterNewAdmin.java:57)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -124,8 +103,29 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- testNewAdminCreation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@359f7cdf]" started-at="2023-11-28T17:24:05 IST" name="tearDown" finished-at="2023-11-28T17:24:07 IST" duration-ms="2487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC_0002_RegisterNewAdmin -->
+      <class name="testCases.TC_0001_EventCreateDelete">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" started-at="2023-11-28T17:22:49 IST" name="setup" finished-at="2023-11-28T17:23:05 IST" duration-ms="16054" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" started-at="2023-11-28T17:23:05 IST" name="tesEeventCreationDeletion" finished-at="2023-11-28T17:23:28 IST" duration-ms="23378" status="PASS">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- tesEeventCreationDeletion -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" started-at="2023-11-27T15:54:48 IST" name="tearDown" finished-at="2023-11-27T15:54:50 IST" duration-ms="2213" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_0001_EventCreateDelete@5af3afd9]" started-at="2023-11-28T17:23:28 IST" name="tearDown" finished-at="2023-11-28T17:23:31 IST" duration-ms="2867" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
