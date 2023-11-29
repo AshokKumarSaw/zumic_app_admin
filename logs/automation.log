@@ -1,0 +1,35 @@
+16:00:30.088 [main] INFO  testCases.TC_0001_EventCreateDelete - Username Entered
+16:00:30.371 [main] INFO  testCases.TC_0001_EventCreateDelete - Password Entered
+16:00:33.758 [main] INFO  testCases.TC_0001_EventCreateDelete - Clicked on Login Button
+16:00:33.792 [main] INFO  testCases.TC_0001_EventCreateDelete - *** Starting TC_0001_Event_Creation_Deletion ***
+16:00:33.933 [main] INFO  testCases.TC_0001_EventCreateDelete - Event Menu Clicked
+16:00:34.016 [main] INFO  testCases.TC_0001_EventCreateDelete - Event List SubMenu Clicked
+16:00:34.517 [main] INFO  testCases.TC_0001_EventCreateDelete - Clicked on Create Button in the Event List Page
+16:00:37.759 [main] INFO  testCases.TC_0001_EventCreateDelete - Random Alphanumeric Event Name Entered
+16:00:38.110 [main] INFO  testCases.TC_0001_EventCreateDelete - Today's Date Selected From Calender
+16:00:38.525 [main] INFO  testCases.TC_0001_EventCreateDelete - Event Time Selected
+16:00:43.985 [main] INFO  testCases.TC_0001_EventCreateDelete - Event Venue Added
+16:00:49.309 [main] INFO  testCases.TC_0001_EventCreateDelete - Artist Name of the Event Added
+16:00:54.414 [main] INFO  testCases.TC_0001_EventCreateDelete - Event is Saved Successfully
+16:00:54.479 [main] INFO  testCases.TC_0001_EventCreateDelete - Clicked on Delete Button to Delete the Saved Event
+16:00:55.672 [main] INFO  testCases.TC_0001_EventCreateDelete - Deletion of the Event is Confirmed
+16:00:55.673 [main] INFO  testCases.TC_0001_EventCreateDelete - *** Finished TC_0001_Event_Creation_Deletion ***
+16:00:58.260 [main] INFO  testCases.TC_0001_EventCreateDelete - Clicked on My Account Icon and subsequently Logout Link
+16:01:08.786 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Username Entered
+16:01:09.008 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Password Entered
+16:01:12.215 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Clicked on Login Button
+16:01:16.823 [main] INFO  testCases.TC_0002_RegisterNewAdmin - *** Starting TC_0002_RegisterNewAdmin ***
+16:01:17.147 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Navigated to the Manager or Admin Page
+16:01:18.508 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Username is Set
+16:01:18.733 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Email is set
+16:01:18.862 [main] INFO  testCases.TC_0002_RegisterNewAdmin - First Name is set
+16:01:19.099 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Last Name is set
+16:01:19.324 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Password is set
+16:01:19.554 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Password is reconfirmed
+16:01:20.089 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Authorization groups are selected
+16:01:20.435 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Admin Accont is created successfully
+16:01:22.236 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Admin is on administartion List page
+16:01:22.413 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Admin is searched using username on the administration list page
+16:01:23.633 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Newly created admin is deleted successfully
+16:01:28.844 [main] INFO  testCases.TC_0002_RegisterNewAdmin - *** Finished TC_0002_RegisterNewAdmin ***
+16:01:30.883 [main] INFO  testCases.TC_0002_RegisterNewAdmin - Clicked on My Account Icon and subsequently Logout Link

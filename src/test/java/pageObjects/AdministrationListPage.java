@@ -48,7 +48,7 @@ public class AdministrationListPage extends BasePage {
 		try {
 			explicitWait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
-			System.out.println("Alert text: ......................" + alert.getText()); // You can use alert.dismiss() to dismiss the alert
+			System.out.println("Alert text: " + alert.getText()); // You can use alert.dismiss() to dismiss the alert
 																	// instead
 			alert.accept();
 		} catch (Exception e) {
