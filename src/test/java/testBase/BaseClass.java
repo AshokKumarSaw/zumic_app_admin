@@ -9,18 +9,14 @@ import java.util.Date;
 import java.util.ResourceBundle;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -28,7 +24,6 @@ import org.testng.annotations.Parameters;
 
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
-import utilities.Constant;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -78,17 +73,20 @@ public class BaseClass {
 		driver.get(rb.getString("applicationUrl"));
 		// driver.get(properties.getProperty("applicationUrl"));
 		driver.manage().window().maximize();
-		
-		//Login to the application
+
+		// Login to the application
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.setLoginUsername(rb.getString("username"));
-	Assert.assertEquals(Constant.ACTUAL_USERNAME, rb.getString("username"), "The actual username used for logging into the application does not match the expected username");
+
+		Assert.assertEquals(loginPage.txtUsername.getAttribute("value"), rb.getString("username"),
+				"The actual username used for logging into the application does not match the expected username");
 		logger.info("Username Entered");
 		loginPage.setLoginPassword(rb.getString("password"));
-		Assert.assertEquals(Constant.ACTUAL_PASSWORD, rb.getString("password"), "The actual password used for logging into the application does not match the expected password");
+		Assert.assertEquals(loginPage.txtPassword.getAttribute("value"), rb.getString("password"),
+				"The actual password used for logging into the application does not match the expected password");
 		logger.info("Password Entered");
 		loginPage.clickBtnLogin();
-		homePage=new HomePage(driver);
+		homePage = new HomePage(driver);
 		Assert.assertTrue(homePage.validateLoggedIn(), "Logout button is not visible. User may not be logged in.");
 		logger.info("Clicked on Login Button");
 
@@ -96,10 +94,10 @@ public class BaseClass {
 
 	@AfterClass(groups = { "sanity", "master", "regression" })
 	public void tearDown() {
-		homePage=new HomePage(driver);
+		homePage = new HomePage(driver);
 		homePage.clickLogout();
-		loginPage=new LoginPage(driver);
-		Assert.assertTrue(loginPage.validateLoggedOut(), "Login button is not visible. User may not be logged out.");
+		loginPage = new LoginPage(driver);
+		Assert.assertTrue(loginPage.btnLogin.isDisplayed(), "Login button is not visible. User may not be logged out.");
 		logger.info("Clicked on My Account Icon and subsequently Logout Link");
 		driver.quit();
 

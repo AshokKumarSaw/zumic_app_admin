@@ -1,19 +1,15 @@
 package testCases;
 
-import java.time.Duration;
-
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import dev.failsafe.internal.util.Durations;
 import pageObjects.AdministrationListPage;
 import pageObjects.HomePage;
-import pageObjects.LoginPage;
 import pageObjects.ManagerPage;
 import testBase.BaseClass;
 import utilities.DataProviders;
+
+
 
 public class TC_0002_RegisterNewAdmin extends BaseClass {
 
@@ -47,9 +43,10 @@ public class TC_0002_RegisterNewAdmin extends BaseClass {
 			AdministrationListPage administrationListPage = new AdministrationListPage(driver);
 			administrationListPage.searchNewlyCreatedAdminByName(username);
 			logger.info("Admin is searched using username on the administration list page");
+			Assert.assertEquals(administrationListPage.exactUsernameToBeDeleted.getText(), username, "The actual username does not match the expected username when searching for a newly created admin");
 			administrationListPage.deleteAdmin();
 			logger.info("Newly created admin is deleted successfully");
-		//	administrationListPage.handleAlertIfPresent();
+			administrationListPage.handleAlertIfPresent();
 			
 			
 			

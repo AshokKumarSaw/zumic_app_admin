@@ -13,11 +13,11 @@ public class LoginPage extends BasePage {
 	
 
 	@FindBy(xpath = "//input[@placeholder='Username']")
-	WebElement txtUsername;
+	public WebElement txtUsername;
 	@FindBy(xpath = "//input[@placeholder='Password']")
-	WebElement txtPassword;
+	public WebElement txtPassword;
 	@FindBy(xpath = "//button[@type='submit']")
-	WebElement btnLogin;
+	public WebElement btnLogin;
 
 	// Methods
 	
@@ -34,10 +34,6 @@ public class LoginPage extends BasePage {
 		btnLogin.click();
 	}
 	
-	public boolean validateLoggedOut()
-	{
-	    boolean result=btnLogin.isDisplayed();
-	    return 	result;
-	}
+	
 
 }

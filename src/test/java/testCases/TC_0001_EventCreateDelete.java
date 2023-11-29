@@ -32,7 +32,7 @@ public class TC_0001_EventCreateDelete extends BaseClass {
 			eventListPage.addArtist();
 			logger.info("Artist Name of the Event Added");
 			eventListPage.saveEvent();
-			logger.info("Event is Saved Successfully");
+			logger.info("Event is Saved Successfully");	
 			eventListPage.deleteSavedEvent();
 			logger.info("Clicked on Delete Button to Delete the Saved Event");
 			eventListPage.confirmDelete();
