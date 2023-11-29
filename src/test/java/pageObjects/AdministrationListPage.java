@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,6 +40,25 @@ public class AdministrationListPage extends BasePage{
 			driver.switchTo().alert().accept();
 			
 		}
+		
+		/*
+		 * public void handleAlertIfPresent() {
+		 * 
+		 * explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5)); try {
+		 * explicitWait.until(ExpectedConditions.alertIsPresent()); Alert alert =
+		 * driver.switchTo().alert(); System.out.println("Alert text: " +
+		 * alert.getText()); // You can use alert.dismiss() to dismiss the alert instead
+		 * alert.accept(); } catch (Exception e) { // No alert present, continue with
+		 * the rest of your code
+		 * System.out.println("No alert found. Continuing with the rest of the code.");
+		 * } }
+		 * 
+		 * public static boolean isAlertPresent(WebDriver driver) { try { // Attempt to
+		 * switch to an alert; if successful, it means the alert is present
+		 * driver.switchTo().alert(); return true; } catch (NoAlertPresentException e) {
+		 * // If NoAlertPresentException is thrown, it means the alert is not present
+		 * return false; } }
+		 */
 		
 	
 }

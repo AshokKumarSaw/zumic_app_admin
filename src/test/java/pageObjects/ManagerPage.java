@@ -97,31 +97,5 @@ public class ManagerPage extends BasePage {
 		lnkManagers.click();
 	}
 
-	public void handleAlertIfPresent() {
-
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		explicitWait.until(ExpectedConditions.alertIsPresent());
-
-		// Check if the alert is present
-		if (isAlertPresent(driver)) {
-			// Handle the alert
-			Alert alert = driver.switchTo().alert();
-			System.out.println("Alert text: " + alert.getText());
-			alert.accept(); // You can use alert.dismiss() to dismiss the alert instead
-		} else {
-			System.out.println("No alert appeared.");
-		}
-
-	}
-
-	public static boolean isAlertPresent(WebDriver driver) {
-		try {
-			// Attempt to switch to an alert; if successful, it means the alert is present
-			driver.switchTo().alert();
-			return true;
-		} catch (NoAlertPresentException e) {
-			// If NoAlertPresentException is thrown, it means the alert is not present
-			return false;
-		}
-	}
+	
 }

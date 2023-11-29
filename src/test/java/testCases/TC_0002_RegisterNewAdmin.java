@@ -49,11 +49,12 @@ public class TC_0002_RegisterNewAdmin extends BaseClass {
 			logger.info("Admin is searched using username on the administration list page");
 			administrationListPage.deleteAdmin();
 			logger.info("Newly created admin is deleted successfully");
-			managerPage.handleAlertIfPresent();
+		//	administrationListPage.handleAlertIfPresent();
 			
 			
 			
 		} catch (Exception e) {
+			e.printStackTrace();
 			Assert.fail("Test Method testNewAdminCreation in Test Script TC_0002_RegisterNewAdmin is Failed");
 		}
 

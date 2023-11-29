@@ -7,13 +7,13 @@
   <test thread-count="5" name="zumicTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.TC_0001_EventCreateDelete">
+      <class name="testCases.TC_0002_RegisterNewAdmin">
         <methods>
           <include name="tearDown"/>
+          <include name="testNewAdminCreation" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="tesEeventCreationDeletion"/>
         </methods>
-      </class> <!-- testCases.TC_0001_EventCreateDelete -->
+      </class> <!-- testCases.TC_0002_RegisterNewAdmin -->
     </classes>
   </test> <!-- zumicTest(failed) -->
 </suite> <!-- Failed suite [zumicSuite] -->
