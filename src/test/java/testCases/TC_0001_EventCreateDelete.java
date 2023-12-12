@@ -1,43 +1,34 @@
 package testCases;
 
+import java.time.Duration;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.EventListPage;
 import pageObjects.HomePage;
 import testBase.BaseClass;
+import utilities.ActionUtil;
 
 public class TC_0001_EventCreateDelete extends BaseClass {
+	public WebDriverWait explicitWait;
 
 	@Test(groups = { "sanity", "master" })
 	public void tesEeventCreationDeletion() {
 		logger.info("*** Starting TC_0001_Event_Creation_Deletion ***");
 		try {
 			HomePage homePage = new HomePage(driver);
-			homePage.clickEvent();
-			logger.info("Event Menu Clicked");
-			homePage.clickEvenlist();
-			logger.info("Event List SubMenu Clicked");
+			homePage.clickEventAndEventList();
 			EventListPage eventListPage = new EventListPage(driver);
-			eventListPage.clickCreate();
-			logger.info("Clicked on Create Button in the Event List Page");
-			eventListPage.randomAlphaNumericEventTitle("title");
-			logger.info("Random Alphanumeric Event Name Entered");
-			eventListPage.eventStartDate();
-			logger.info("Today's Date Selected From Calender");
-			eventListPage.selectEventTime();
-			logger.info("Event Time Selected");
+			eventListPage.clickCreateAndAddEventTitle();
+			eventListPage.eventStartDateAndTime();
 			eventListPage.addEventVenue();
-			logger.info("Event Venue Added");
 			eventListPage.addArtist();
-			logger.info("Artist Name of the Event Added");
 			eventListPage.saveEvent();
-			logger.info("Event is Saved Successfully");	
-			eventListPage.deleteSavedEvent();
-			logger.info("Clicked on Delete Button to Delete the Saved Event");
-			eventListPage.confirmDelete();
-			logger.info("Deletion of the Event is Confirmed");
-
+			eventListPage.deleteEventAndConfirmDelete();
 		} catch (Exception e) {
 			Assert.fail("Test Method tesEeventCreationDeletion in Test Script TC_0001_EventCreateDelete is Failed");
 		}

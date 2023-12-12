@@ -24,6 +24,7 @@ import org.testng.annotations.Parameters;
 
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
+import utilities.ActionUtil;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -74,33 +75,21 @@ public class BaseClass {
 		// driver.get(properties.getProperty("applicationUrl"));
 		driver.manage().window().maximize();
 
-		// Login to the application
+		// Login into the application
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.setLoginUsername(rb.getString("username"));
-
-		Assert.assertEquals(loginPage.txtUsername.getAttribute("value"), rb.getString("username"),
-				"The actual username used for logging into the application does not match the expected username");
-		logger.info("Username Entered");
-		loginPage.setLoginPassword(rb.getString("password"));
-		Assert.assertEquals(loginPage.txtPassword.getAttribute("value"), rb.getString("password"),
-				"The actual password used for logging into the application does not match the expected password");
-		logger.info("Password Entered");
-		loginPage.clickBtnLogin();
-		homePage = new HomePage(driver);
-		Assert.assertTrue(homePage.validateLoggedIn(), "Logout button is not visible. User may not be logged in.");
-		logger.info("Clicked on Login Button");
+		loginPage.login(rb.getString("username"), rb.getString("password"));
 
 	}
 
 	@AfterClass(groups = { "sanity", "master", "regression" })
-	public void tearDown() {
-		homePage = new HomePage(driver);
-		homePage.clickLogout();
+	public void tearDown() 
+	{
+		homePage=new HomePage(driver);
+		homePage.logout();
 		loginPage = new LoginPage(driver);
-		Assert.assertTrue(loginPage.btnLogin.isDisplayed(), "Login button is not visible. User may not be logged out.");
-		logger.info("Clicked on My Account Icon and subsequently Logout Link");
+		loginPage.validateLoggedOut();
 		driver.quit();
-
+		
 	}
 
 	public String captureScreen(String tname) throws IOException {

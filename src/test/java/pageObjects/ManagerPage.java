@@ -12,6 +12,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.ActionUtil;
+
 public class ManagerPage extends BasePage {
 	public WebDriverWait explicitWait;
 	JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -55,47 +57,43 @@ public class ManagerPage extends BasePage {
 	WebElement lnkManagers;
 
 	// Method
-
-	public void setUsername(String username) {
+	
+/**
+ * Manager details as shown below would be passed as input to the respective fields
+ * @param username
+ * @param email
+ * @param fname
+ * @param lname
+ * @param password
+ * @param confirmpassword
+ */
+	public void setManagerDetail(String username,String email,String fname,String lname,String password,String confirmpassword) {
 		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(inputUsername)).sendKeys(username);
-	}
-
-	public void setEmail(String email) {
 		inputEmail.sendKeys(email);
-	}
-
-	public void setFname(String fname) {
 		inputFirstname.sendKeys(fname);
-	}
-
-	public void setLname(String lname) {
 		inputLastname.sendKeys(lname);
-	}
-
-	public void setPassword(String password) {
 		inputPassword.sendKeys(password);
-	}
-
-	public void confirmPassword(String confirmpassword) {
 		inputConfirmPassword.sendKeys(confirmpassword);
+		logger.info("The Manager details username, email, fname, lname, password,confirmpassword are passed as input successfully" );
 	}
 
-	public void selectAuthorizationGroup() {
-		js.executeScript("window.scrollBy(0,500)");
-		chkboxAdmin.click();
-		chkboxManager.click();
-		chkboxTestgroup.click();
+	/**
+	 * Authorization group would be selected,Manager is Saved and User is navigated to Manager's list page
+	 */
+
+	public void selectAccessGroupSavemanagerAndNavigateToManagerList() {
+		ActionUtil.scrollWebPage(0, 500, (JavascriptExecutor) driver);
+		ActionUtil.click(chkboxAdmin);
+		ActionUtil.click(chkboxManager);
+		ActionUtil.click(chkboxTestgroup);
+		ActionUtil.click(btnSave);
+		ActionUtil.scrollWebPage(0, -1000, (JavascriptExecutor) driver);
+		ActionUtil.click(lnkManagers);
+		logger.info("Authorization group is selected,Manager is Saved and User is navigated to Manager's list page");
 	}
 
-	public void saveNewlyCreatedManager() {
-		btnSave.click();
-	}
-
-	public void goToAdministrationList() {
-		js.executeScript("window.scrollBy(0,-1000)");
-		lnkManagers.click();
-	}
+	
 
 	
 }

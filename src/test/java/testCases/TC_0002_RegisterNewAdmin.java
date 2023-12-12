@@ -9,8 +9,6 @@ import pageObjects.ManagerPage;
 import testBase.BaseClass;
 import utilities.DataProviders;
 
-
-
 public class TC_0002_RegisterNewAdmin extends BaseClass {
 
 	@Test(groups = { "sanity" }, dataProvider = "NewAdminAccountData", dataProviderClass = DataProviders.class)
@@ -20,36 +18,13 @@ public class TC_0002_RegisterNewAdmin extends BaseClass {
 		try {
 			HomePage homePage = new HomePage(driver);
 			homePage.goToAdminPage();
-			logger.info("Navigated to the Manager or Admin Page");
 			ManagerPage managerPage = new ManagerPage(driver);
-			managerPage.setUsername(username);
-			logger.info("Username is Set");
-			managerPage.setEmail(email);
-			logger.info("Email is set");
-			managerPage.setFname(fname);
-			logger.info("First Name is set");
-			managerPage.setLname(lname);
-			logger.info("Last Name is set");
-			managerPage.setPassword(password);
-			logger.info("Password is set");
-			managerPage.confirmPassword(confirmpassword);
-			logger.info("Password is reconfirmed");
-			managerPage.selectAuthorizationGroup();
-			logger.info("Authorization groups are selected");
-			managerPage.saveNewlyCreatedManager();
-			logger.info("Admin Accont is created successfully");
-			managerPage.goToAdministrationList();
-			logger.info("Admin is on administartion List page");
+			managerPage.setManagerDetail(username, email, fname, lname, password, confirmpassword);
+			managerPage.selectAccessGroupSavemanagerAndNavigateToManagerList();
 			AdministrationListPage administrationListPage = new AdministrationListPage(driver);
-			administrationListPage.searchNewlyCreatedAdminByName(username);
-			logger.info("Admin is searched using username on the administration list page");
-			Assert.assertEquals(administrationListPage.exactUsernameToBeDeleted.getText(), username, "The actual username does not match the expected username when searching for a newly created admin");
-			administrationListPage.deleteAdmin();
-			logger.info("Newly created admin is deleted successfully");
+			administrationListPage.searchNewlyCreatedAdminByNameAndDelete(username);		
 			administrationListPage.handleAlertIfPresent();
-			
-			
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			Assert.fail("Test Method testNewAdminCreation in Test Script TC_0002_RegisterNewAdmin is Failed");

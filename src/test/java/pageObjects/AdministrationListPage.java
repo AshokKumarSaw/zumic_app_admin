@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class AdministrationListPage extends BasePage {
 	public WebDriverWait explicitWait;
@@ -30,18 +31,28 @@ public class AdministrationListPage extends BasePage {
 
 	// Method
 
-	public void searchNewlyCreatedAdminByName(String username) {
+	/**
+	 * Newly Created Manager is searched Using Name And Deleted Subsequently
+	 * 
+	 * @param username
+	 */
+	public void searchNewlyCreatedAdminByNameAndDelete(String username) {
 		inputSearch.sendKeys(username);
-	}
-
-	public void deleteAdmin() {
+		Assert.assertEquals(exactUsernameToBeDeleted.getText(), username,
+				"The actual username does not match the expected username when searching for a newly created admin");
 		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(iconDelete)).click();
-		// iconDelete.click();
 		driver.switchTo().alert().accept();
-
+		logger.info("Newly Created Manager is searched Using Name and Deleted successfully " + username);
 	}
 
+	
+
+	/**
+	 * Below two methods are actually not a feature in Application but sometimes due
+	 * to a known bug in application an alert appears. To handle that alert below
+	 * two functions are written.
+	 */
 	public void handleAlertIfPresent() {
 
 		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
