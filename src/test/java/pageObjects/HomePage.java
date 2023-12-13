@@ -48,8 +48,7 @@ public class HomePage extends BasePage {
 
 		ActionUtil.click(drpdwnMyAccount);
 		boolean result = lnkLogout.isDisplayed();
-		Assert.assertTrue(validateLoggedIn(), "Logout button is not visible. User may not be logged in.");
-		
+		Assert.assertTrue(result, "Logout button is not visible. User may not be logged in.");
 		logger.info("User LogIn is Validated Successfully");
 		return result;
 
