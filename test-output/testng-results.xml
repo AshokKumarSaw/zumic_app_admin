@@ -1,73 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-12T12:31:48 IST" name="zumicSuite" finished-at="2023-12-12T12:32:42 IST" duration-ms="53582">
+  <suite started-at="2023-12-22T00:36:49 IST" name="zumicSuite" finished-at="2023-12-22T00:37:26 IST" duration-ms="36679">
     <groups>
       <group name="sanity">
-        <method signature="TC_0001_EventCreateDelete.tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@408d971b]" name="tesEeventCreationDeletion" class="testCases.TC_0001_EventCreateDelete"/>
-        <method signature="TC_0002_RegisterNewAdmin.testNewAdminCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@34e9fd99]" name="testNewAdminCreation" class="testCases.TC_0002_RegisterNewAdmin"/>
+        <method signature="TC_0001_EventCreateDelete.tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@75d4a5c2]" name="tesEeventCreationDeletion" class="testCases.TC_0001_EventCreateDelete"/>
       </group> <!-- sanity -->
       <group name="master">
-        <method signature="TC_0001_EventCreateDelete.tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@408d971b]" name="tesEeventCreationDeletion" class="testCases.TC_0001_EventCreateDelete"/>
+        <method signature="TC_0001_EventCreateDelete.tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@75d4a5c2]" name="tesEeventCreationDeletion" class="testCases.TC_0001_EventCreateDelete"/>
       </group> <!-- master -->
     </groups>
-    <test started-at="2023-12-12T12:31:48 IST" name="zumicTest" finished-at="2023-12-12T12:32:42 IST" duration-ms="53582">
-      <class name="testCases.TC_0002_RegisterNewAdmin">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@34e9fd99]" started-at="2023-12-12T12:32:16 IST" name="setup" finished-at="2023-12-12T12:32:27 IST" duration-ms="11251" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testNewAdminCreation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@34e9fd99]" started-at="2023-12-12T12:32:28 IST" name="testNewAdminCreation" data-provider="NewAdminAccountData" finished-at="2023-12-12T12:32:40 IST" duration-ms="11932" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Advika]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[teknotrait.ashok+01@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Advika]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Sahu]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[!@#123Advika]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[!@#123Advika]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNewAdminCreation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_0002_RegisterNewAdmin@34e9fd99]" started-at="2023-12-12T12:32:40 IST" name="tearDown" finished-at="2023-12-12T12:32:42 IST" duration-ms="1741" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_0002_RegisterNewAdmin -->
+    <test started-at="2023-12-22T00:36:49 IST" name="zumicTest" finished-at="2023-12-22T00:37:26 IST" duration-ms="36679">
       <class name="testCases.TC_0001_EventCreateDelete">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_0001_EventCreateDelete@408d971b]" started-at="2023-12-12T12:31:49 IST" name="setup" finished-at="2023-12-12T12:32:03 IST" duration-ms="14329" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:testCases.TC_0001_EventCreateDelete@75d4a5c2]" started-at="2023-12-22T00:36:49 IST" name="setup" finished-at="2023-12-22T00:37:11 IST" duration-ms="21454" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,11 +24,125 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@408d971b]" started-at="2023-12-12T12:32:03 IST" name="tesEeventCreationDeletion" finished-at="2023-12-12T12:32:13 IST" duration-ms="10491" status="PASS">
+        <test-method signature="tesEeventCreationDeletion()[pri:0, instance:testCases.TC_0001_EventCreateDelete@75d4a5c2]" started-at="2023-12-22T00:37:11 IST" name="tesEeventCreationDeletion" finished-at="2023-12-22T00:37:11 IST" duration-ms="16" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test Method tesEeventCreationDeletion in Test Script TC_0001_EventCreateDelete is Failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test Method tesEeventCreationDeletion in Test Script TC_0001_EventCreateDelete is Failed
+at org.testng.Assert.fail(Assert.java:111)
+at testCases.TC_0001_EventCreateDelete.tesEeventCreationDeletion(TC_0001_EventCreateDelete.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tesEeventCreationDeletion -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_0001_EventCreateDelete@408d971b]" started-at="2023-12-12T12:32:13 IST" name="tearDown" finished-at="2023-12-12T12:32:16 IST" duration-ms="2582" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_0001_EventCreateDelete@75d4a5c2]" started-at="2023-12-22T00:37:15 IST" name="tearDown" finished-at="2023-12-22T00:37:26 IST" duration-ms="10373" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=120.0.6099.110)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1451475f49b6a7ecb8de7031d5f1b76d, clickElement {id=322872A962A143B0D5BA852FE58C5A73_element_77}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50050}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50050/devtoo..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1451475f49b6a7ecb8de7031d5f1b76d)] -> xpath: //a[normalize-space()='Logout']]
+Session ID: 1451475f49b6a7ecb8de7031d5f1b76d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=120.0.6099.110)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1451475f49b6a7ecb8de7031d5f1b76d, clickElement {id=322872A962A143B0D5BA852FE58C5A73_element_77}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50050}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50050/devtoo..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (1451475f49b6a7ecb8de7031d5f1b76d)] -> xpath: //a[normalize-space()='Logout']]
+Session ID: 1451475f49b6a7ecb8de7031d5f1b76d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy33.click(Unknown Source)
+at utilities.ActionUtil.click(ActionUtil.java:18)
+at pageObjects.HomePage.logout(HomePage.java:85)
+at testBase.BaseClass.tearDown(BaseClass.java:88)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:229)
+at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:215)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:131)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

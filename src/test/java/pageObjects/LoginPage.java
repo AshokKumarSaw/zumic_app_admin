@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import utilities.ActionUtil;
-
 public class LoginPage extends BasePage {
 	public LoginPage(WebDriver driver) {
 		super(driver);
